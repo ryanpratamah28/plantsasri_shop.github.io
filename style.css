@@ -28,7 +28,7 @@ body {
     width: min(100% - 30px, 1320px);
     margin-inline: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 550px;
 }
 
 .card{
@@ -103,38 +103,39 @@ body {
     justify-content: start;
 }
 
-.quantity-product span {
-    margin: 10px 10px;
-    font-size: 18px;
-    font-weight: 300;
+.quantity-product button.minus-btn {
+    width: 45px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    border-right: 2px solid #2DB878;
+    color: var(--text-dark-color);
+    color: #000;
+    border-radius: 0;
 }
 
-.quantity-product span.minus p {
-    font-size: 18px;
-    margin-right: 20px;
-    pointer-events: none;
+.quantity-product button.plus-btn {
+    width: 45px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #2DB878;
+    color: var(--text-dark-color);
+    border-radius: 0;
 }
 
-.quantity-product span.plus p {
-    font-size: 18px;
-    margin-left: 20px;
-    pointer-events: none;
-}
-
-.quantity-product span.minus {
-    border-right: 2px solid rgba(0,0,0,0.2);
-}
-
-.quantity-product span.plus {
-    border-left: 2px solid rgba(0,0,0,0.2);
-}
-
-.quantity-product span.num {
-    margin: 0 25px;
-    color: var(--green-color);
-    font-weight: 600;
+.quantity-product input {
+    border: none;
     text-align: center;
-    pointer-events: none;
+    width: 100px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 300;
 }
 
 .track-summary .card h1 {
@@ -150,16 +151,11 @@ body {
     display: flex;
     justify-content: center;
     width: 50px;
-    bottom: 180px;
+    bottom: 210px;
     position: absolute;
     border-radius: 10px;
     background-color: var(--green-color);
     height: 2px;
-}
-
-.detail-summary .total-order{
-    display: flex;
-    justify-content: space-between;
 }
 
 .detail-summary .total-order h2{
@@ -170,19 +166,17 @@ body {
 }
 
 .detail-summary .total-order p{
-    margin-top: 25px;
+    margin-top: 22.5px;
     align-items: center;
     font-size: 18px;
     font-weight: 600;
 }
 
-.detail-summary .total-order span{
+.detail-summary .total-order h6{
+    margin-top: 25px;
+    align-items: center;
+    font-size: 18px;
     font-weight: 300;
-}
-
-.detail-summary .total-price{
-    display: flex;
-    justify-content: space-between;
 }
 
 .detail-summary .total-price h2{
@@ -274,6 +268,18 @@ body {
     }
 }
 
+@media screen and (min-width: 992px){
+    .track-summary{
+        height: 100%;
+    }
+
+    .track-summary .card{
+        padding: 26px;
+        position: sticky;
+        top: 40px;
+    }
+}
+
 @media screen and (max-width: 991px){
     .card{
         margin-bottom: 30px;
@@ -305,27 +311,6 @@ body {
     
     .order p {
         font-size: 12px;
-    }
-    
-    .quantity-product{
-        height: 40px;
-    }
-
-    .quantity-product span {
-        margin: 10px 10px;
-        font-size: 16px;
-    }
-
-    .quantity-product span.minus p {
-        font-size: 16px;
-    }
-
-    .quantity-product span.plus p {
-        font-size: 16px;
-    }
-
-    .quantity-product span.num {
-        margin: 0 20px;
     }
 
     .nav-tabs a.nav-link.active {
